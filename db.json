@@ -1,0 +1,33 @@
+{
+  "quote": [
+    {
+      "intro": "Make Your Path!",
+      "quote": "Do not let what you cannot do interfere with what you can do. So what can you do?",
+      "rating": 8,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "intro": "Don't Worry",
+      "quote": "Learn to enjoy every minute of your life. Be happy now. Don't wait for somethingoutside of yourself to make you happy in the future",
+      "rating": 7
+    },
+    {
+      "id": 3,
+      "intro": "You Are Ok",
+      "quote": "Do not wish for an easy life. Wish for the strength to endure a difficult one.",
+      "rating": 9
+    },
+    {
+      "intro": "This time updates",
+      "quote": "again OK with2",
+      "rating": 2,
+      "id": 4
+    }
+  ],
+  "todo": {
+    "id": 1,
+    "title": "Meditate",
+    "detail": "In the morning"
+  }
+}

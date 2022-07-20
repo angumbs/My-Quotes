@@ -21,7 +21,7 @@ function QuoteIntro({item}) {
         </div>
 
         <h2 className="card-title text-2xl text-neutral pb-1">
-          <FaSpa className='text-4xl pr-2' />{console.log(item.id)}
+          <FaSpa className='text-4xl pr-2' />
           <Link to={`/Quote/${item.id}`}>{item.intro}</Link>
         </h2>
     </Card>

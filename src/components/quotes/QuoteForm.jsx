@@ -13,6 +13,7 @@ function QuoteForm() {
   const [btnDisabled, setBtnDisabled] = useState(true)
   const [message, setMessage] = useState('')
   const [rating, setRating] = useState(7)
+  const [isShown, setIsShown] = useState(false)
   
   const {addQuote, quoteEdit, updateQuote} = useContext(QuoteContext)
 
@@ -69,14 +70,16 @@ function QuoteForm() {
 
   return (
       <Card> 
-        <h2 className="text-2xl text-neutral text-center">Add A Quote</h2>  
+        <h2 className="btn btn-sm" onClick={() => setIsShown(true)}>Add A Quote</h2>  
+        {isShown && <h3>show</h3>}
         <form onSubmit={handleSubmit} className="form-control gap-3">
             <input name="mood" value={text.mood} onChange={handleTextChange} type="text" placeholder="Mood" className="input input-bordered" />
             <textarea name="quote" value={text.quote} onChange={handleTextChange} className="textarea textarea-bordered bg-neutral" placeholder="Quote"></textarea>
             {message && <div>{message}</div>}
             <RatingSelect select={(rating) => setRating(rating)} />
-            <Button type='submit' disabled={btnDisabled}>Submit {quoteEdit.item.id}</Button>
+            <Button type='submit' disabled={btnDisabled}>Submit</Button>
         </form>
+
       </Card>  
   )
 }

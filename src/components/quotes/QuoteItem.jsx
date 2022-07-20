@@ -1,4 +1,4 @@
-import propTypes from 'prop-types'
+
 function QuoteItem({item}) {
 
   return (
@@ -15,10 +15,6 @@ function QuoteItem({item}) {
       </div>
     </div>
   )
-}
-
-QuoteItem.propTypes = {
-  item: propTypes.object.isRequired,
 }
 
 export default QuoteItem

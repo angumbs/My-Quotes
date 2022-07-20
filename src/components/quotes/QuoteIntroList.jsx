@@ -2,16 +2,18 @@ import { useContext } from 'react'
 import QuoteContext from '../context/QuoteContext'
 import {motion, AnimatePresence} from 'framer-motion'
 import QuoteIntro from './QuoteIntro'
+import Spinner from '../shared/Spinner'
 
 function QuoteIntroList () {
 
-  const {quote} = useContext(QuoteContext)
+  const {quote, isLoading} = useContext(QuoteContext)
 
-  if (!quote || quote.length === 0) {
+  if (!isLoading && (!quote || quote.length === 0)) {
     return <div>No Quotes</div>
   } else {
 
-    return <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+    return isLoading ? <Spinner /> : (
+      <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
       <AnimatePresence>
       {quote.map((item) => (
         <motion.div
@@ -24,6 +26,7 @@ function QuoteIntroList () {
       ))}
       </AnimatePresence>
       </div>
+    ) 
   }  
 }
 
